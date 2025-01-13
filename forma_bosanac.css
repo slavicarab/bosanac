@@ -1,0 +1,42 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+ 
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    width: 60vh;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 20px;
+    border: solid 2px white;
+    background-color: rgb(241, 240, 240);
+    padding: 5px;
+    margin: 5px;
+   
+}
+
+form > input{
+    padding: 10px;
+    border: 1px solid #000;
+    border-radius: 5px;
+    height: 2rem;
+
+}
+
+form > select{
+    padding: 10px;
+    border: 1px solid #000;
+    border-radius: 5px;
+    height: 2rem;
+}

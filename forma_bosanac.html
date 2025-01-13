@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="forma_bosanac.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Anfrage</h1>
+        <form action="" id="userForm">
+            <input type="text" name="name" id="userName" placeholder="Vorname-Nachname">
+            <input type="text" name="email" id="userEmail" placeholder="E-Mail">
+            <input type="text" name="telephone"  id="userPhone" placeholder="Telefon">
+            <input type="text" name="auszug" id="userAddress" placeholder="Auszug - Adresse">
+            <label for="userFloor" name="userFloor">Stockwerk</label>
+            <select name="ausstockwerk" id="userFloor">
+                <option value=""></option>
+                <option value="1">0</option>
+                <option value="1">1</option>
+                <option value="1">2</option>
+                <option value="1">3</option>
+                <option value="1">4</option>
+                <option value="1">5</option>
+                <option value="1">6</option>
+                <option value="1">7</option>
+            </select>
+            <input type="text" name="einzug" id="goalAddress" placeholder="Einzug - Adresse">
+            <label for="goalFloor" name=" goalFloor">Stockwerk</label>
+            <select name="ausstockwerk" id="goalFloor">
+                <option value=""></option>
+                <option value="0">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+            </select>
+            <label for="category" name="category">Kategorie</label>
+            <select name="kategorie" id="category">
+                <option value="1"></option>
+                <option value="privat">Privat</option>
+                <option value="Geschäftlich">Geschäftlich</option>
+                <option value="Ins Ausland">Ins Ausland</option>
+                <option value="Klaviertransport">Klaviertransport</option>
+            </select>
+            <h3>Wofür benötigen Sie den Transport?</h3>
+            <select name="umzugTeil" id="moveType">
+                <option value=""></option>
+                <option value="Gesamter Haushalt">Gesamter Haushalt</option>
+                <option value="Teile meines Haushalts">Teile meines Haushalts</option>
+                <option value="Weniger als 10 Kartons">Weniger als 10 Kartons</option>
+            </select>
+            <h3>Wann möchten Sie umziehen?</h3>
+            <input type="date" name="date" id="moveDate">
+           
+            <button type="submit" id="btnSubmit">Anfrage senden</button>
+
+        </form>
+    </div>
+   <script src="forma_bosanac.js"></script>
+</body>
+</html>
