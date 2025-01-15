@@ -2,6 +2,7 @@ const express = require('express');
 const nodemailer = require('nodemailer');
 const bodyParser = require('body-parser');
 const path = require('path');
+const { redirect } = require('express/lib/response');
 require('dotenv').config(); // Load environment variables
 
 const app = express();
@@ -13,6 +14,10 @@ app.use(express.static(path.join(__dirname, 'public')));
 // Root Route - Serve the form
 app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, 'views', 'forma_bosanac.html'));
+});
+
+app.get('/danke', (req, res) => {
+  res.sendFile(path.join(__dirname, 'views', 'danke.html'));
 });
 
 // Backend Route - Handle form submission
@@ -36,13 +41,14 @@ app.post('/submit', async (req, res) => {
 
     const mailOptions = {
       from: userEmailVal,
-      to: 'marko@fractal.rs', // Replace with recipient email
-      subject: `Message from ${userNameVal}`,
-      text: `Name: ${userNameVal}\nEmail: ${userEmailVal}\nAddress: ${userAddressVal}\nFloor: ${userFloorVal}\nGoal Address: ${goalAddressVal}\nGoal Floor: ${goalFloorVal}\nCategory: ${categoryVal}\nMove Type: ${moveTypeVal}\nMove Date: ${moveDateVal}`,
+      to: 'office@furst.at', // Replace with recipient email
+      cc: 'slavicarabrenovic@yahoo.com',
+      subject: `Nachricht von ${userNameVal}`,
+      text: `Name: ${userNameVal}\nEmail: ${userEmailVal}\nAuszug - Adresse: ${userAddressVal}\nStock: ${userFloorVal}\nEinzug - Adresse: ${goalAddressVal}\nStock: ${goalFloorVal}\nKategorie: ${categoryVal}\nUmzug: ${moveTypeVal}\nUmzug Datum: ${moveDateVal}`,
     };
 
     await transporter.sendMail(mailOptions);
-    res.status(200).send({ success: 'Email sent successfully!' });
+    res.status(200).send({ redirect: '/danke'});
   } catch (error) {
     console.error(error);
     res.status(500).send({ error: 'Failed to send email. Try again later.' });

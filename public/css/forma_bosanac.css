@@ -1,7 +1,13 @@
+body{
+    background-color: #F6F9FE;
+
+}
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Popins', sans-serif;
 }
 
 .container{
@@ -15,28 +21,68 @@
 form{
     display: flex;
     flex-direction: column;
-    width: 60vh;
+    width: 90vh;
     gap: 1rem;
     justify-content: center;
     margin-top: 20px;
-    border: solid 2px white;
-    background-color: rgb(241, 240, 240);
+    border-radius: 8px;
     padding: 5px;
     margin: 5px;
+    gap: 0;
    
+   
+}
+
+form > label{
+    padding-left: 30px;
 }
 
 form > input{
     padding: 10px;
-    border: 1px solid #000;
+    border: 1px solid #858080;
     border-radius: 5px;
     height: 2rem;
+    color: #c5c0c0;
+    margin: 20px;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    border-bottom:0.5px solid black;
 
 }
 
 form > select{
     padding: 10px;
-    border: 1px solid #000;
+    border: 1px solid #858080;
     border-radius: 5px;
+    height: 2.2rem;
+    margin: 20px;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    border-bottom:0.5px solid black;
+}
+
+#btnSubmit{
     height: 2rem;
+    width: 50%;
+    border-radius: 5px;
+    background-color: #106EEA;
+    color: #F6F9FE;
+    font-weight: 700;
+    font-size: 1rem;
+    border: none;
+    align-self: center;
+
+}
+
+form > h4{
+    font-weight: 500;
+    padding-left: 30px;
+}
+
+ img{
+    height: 80px;
+    margin: 50px 50px 0 50px;
+    
 }

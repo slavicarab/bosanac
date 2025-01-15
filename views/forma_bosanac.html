@@ -4,10 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet" media="screen and (max-device-width: 480px)">
     <link rel="stylesheet" href="/css/forma_bosanac.css">
 </head>
 <body>
+    <header id="header">
+        <img src="/img/Fuerst_klein-min.png" alt="logo">
+        
+    </header>
     <div class="container">
+        
         <h1>Anfrage</h1>
         <form action="" id="userForm">
             <input type="text" name="name" id="userName" placeholder="Vorname-Nachname">
@@ -47,14 +53,14 @@
                 <option value="Ins Ausland">Ins Ausland</option>
                 <option value="Klaviertransport">Klaviertransport</option>
             </select>
-            <h3>Wofür benötigen Sie den Transport?</h3>
+            <h4>Wofür benötigen Sie den Transport?</h4>
             <select name="umzugTeil" id="moveType">
                 <option value=""></option>
                 <option value="Gesamter Haushalt">Gesamter Haushalt</option>
                 <option value="Teile meines Haushalts">Teile meines Haushalts</option>
                 <option value="Weniger als 10 Kartons">Weniger als 10 Kartons</option>
             </select>
-            <h3>Wann möchten Sie umziehen?</h3>
+            <h4>Wann möchten Sie umziehen?</h4>
             <input type="date" name="date" id="moveDate">
 
             <button type="submit" id="btnSubmit">Anfrage senden</button>

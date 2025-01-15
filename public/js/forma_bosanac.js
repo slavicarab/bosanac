@@ -12,8 +12,8 @@ const moveDate = document.getElementById('moveDate');
 const btnSubmit = document.getElementById('btnSubmit');
 
 
+
 function alertMessage(element, message){
-    console.log('bla bla')
     const aMessage = document.createElement('small');
     aMessage.innerHTML = message;
     element.after(aMessage);
@@ -64,9 +64,10 @@ function validateForm (event){
             },
             body:JSON.stringify({userNameVal,userEmailVal,userAddressVal,goalAddressVal, userFloorVal, goalFloorVal,categoryVal, moveTypeVal, moveDateVal})
         })
-        .then((response) => response.text())
+        .then((response) => response.json())
         .then((data) => {
-            console.log(data);
+            window.location.href = data.redirect;
+
         })
         .catch((error) => {
             console.log("Error:", error)
