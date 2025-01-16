@@ -31,8 +31,8 @@ app.post('/submit', async (req, res) => {
   try {
     // Set up Nodemailer
     const transporter = nodemailer.createTransport({
-      host: 'mail.fractal.rs',
-      port: 587,
+      host: 'localhost',
+      port: 25,
       auth: {
         user: process.env.EMAIL_USER,
         pass: process.env.EMAIL_PASS,
